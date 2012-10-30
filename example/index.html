@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script type="text/javascript" src="../lib/loggingclient.js"></script>
+    <script type="text/javascript">
+        function formsubmit() {
+            "use strict";
+            console.log('hi');
+            var level = document.getElementById("level").value;
+            var id = document.getElementById("id").value;
+            var msg = document.getElementById("msg").value;
+            logging.sendLog(level, id, msg);
+            return false;
+        }
+    </script>
+</head>
+<body>
+<form action="#" onsubmit="return formsubmit()">
+    <label>Level</label>
+    <select id="level">
+        <option>Info</option>
+        <option>Warn</option>
+        <option>Error</option>
+        <option>Debug</option>
+    </select>
+    <label>identifier</label>
+    <input id="id" value="id" placeholder="test" required autofocus>
+    <label>message</label>
+    <input id="msg" value="msg" required>
+    <input type="submit" value="send">
+</form>
+</body>
+</html>
