@@ -1,0 +1,11 @@
+{ "name" : "logging-client"
+, "version" : "0.1.0"
+, "author" : "Paul Shannon"
+, "description" : "Client Support for logging-server"
+, "scripts" : { }
+, "dependencies" : { "socket.io" : "*" }
+, "devDependencies" : { "grunt-bump" : "*"
+                      , "gruntacular" : "*"
+                      , "logging-server" : "git://github.com/devpaul/logging-server.git"
+                      }
+}
